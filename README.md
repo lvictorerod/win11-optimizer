@@ -56,4 +56,4 @@ Use this script at your own risk. It is recommended to create a system restore p
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [[LICENSE](LICENSE)](https://github.com/lvictorerod/win11-optimizer/blob/main/LICENSE) file for details.
