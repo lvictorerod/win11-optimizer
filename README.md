@@ -65,7 +65,7 @@ To resolve:
 Get-WindowsCapability -Online | Where-Object Name -like '*App.Support*' | Add-WindowsCapability -Online
 ```
 - Ensure your Temp directory exists and is accessible: $env:TEMP and $env:TMP should point to valid, writable locations.
-For more details, see [Troubleshoot PowerShell module loading errors](https://learn.microsoft.com/powershell/scripting/troubleshooting/module-not-loading?view=powershell-7.4).
+For more details, see [Troubleshoot PowerShell module loading errors](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/import-module?view=powershell-7.5).
 
 ## Disclaimer
 
