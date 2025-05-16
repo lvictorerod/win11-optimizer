@@ -51,7 +51,7 @@ The script performs the following optimizations:
 - Adjusts system settings to improve overall performance.
 
 ## Issues:
-- 1. [Error] Critical error occurred: The 'Get-AppxPackage' command was found in the module 'Appx': 
+1. [Error] Critical error occurred: The 'Get-AppxPackage' command was found in the module 'Appx': 
 
 [Fix] The error indicates that the PowerShell script failed because the Appx module could not be loaded, specifically due to a missing file in the Temp directory.
 This usually happens if the Appx module is not installed, is corrupted, or if there are permission or environment issues with the Temp directory.
@@ -60,23 +60,12 @@ To resolve:
 - Run Import-Module Appx to see if it loads without error.
 - If it fails, ensure the Appx module is present by running Get-Module -ListAvailable Appx.
 - If missing, repair your Windows installation or re-register built-in modules using:
-- 
+
 ```powershell
 Get-WindowsCapability -Online | Where-Object Name -like '*App.Support*' | Add-WindowsCapability -Online
 ```
 - Ensure your Temp directory exists and is accessible: $env:TEMP and $env:TMP should point to valid, writable locations.
-For more details, see [Troubleshoot PowerShell module loading errors](- The error indicates that the PowerShell script failed because the Appx module could not be loaded, specifically due to a missing file in the Temp directory.
-- This usually happens if the Appx module is not installed, is corrupted, or if there are permission or environment issues with the Temp directory.
-- To resolve:
-  - Open a new PowerShell session as Administrator.
-  - Run Import-Module Appx to see if it loads without error.
-  - If it fails, ensure the Appx module is present by running Get-Module -ListAvailable Appx.
-  - If missing, repair your Windows installation or re-register built-in modules using:
-    ```powershell
-    Get-WindowsCapability -Online | Where-Object Name -like '*App.Support*' | Add-WindowsCapability -Online
-    ```
-  - Ensure your Temp directory exists and is accessible: $env:TEMP and $env:TMP should point to valid, writable locations.
-- For more details, see [Troubleshoot PowerShell module loading errors](https://learn.microsoft.com/powershell/scripting/troubleshooting/module-not-loading?view=powershell-7.4).
+For more details, see [Troubleshoot PowerShell module loading errors](https://learn.microsoft.com/powershell/scripting/troubleshooting/module-not-loading?view=powershell-7.4).
 
 ## Disclaimer
 
